@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 
 const placedStudents = [
-  { name: "Akil", role: "Graphic Designer", company: "Adwemy Motor Pvt. Ltd.", image: "akil-1.jpg" },
+  { name: "Akil", role: "Graphic Designer", company: "Adwemy Motor Pvt. Ltd.", image: "Akil-1.jpg" },
   { name: "Aman", role: "Graphic Designer", company: "Adwemy Motor Pvt. Ltd.", image: "Aman-1.jpg" },
-  { name: "Amit", role: "Graphic Designer", company: "Adwemy Motor Pvt. Ltd.", image: "amit-1.jpg" },
+  { name: "Amit", role: "Graphic Designer", company: "Adwemy Motor Pvt. Ltd.", image: "Amit-1.jpg" },
   { name: "Arjun", role: "Graphic Designer", company: "Adwemy Motor Pvt. Ltd.", image: "arjun-1.webp" },
-  { name: "Bhavna", role: "Graphic Designer", company: "Adwemy Motor Pvt. Ltd.", image: "bhavna-1.jpg" },
+  { name: "Bhavna", role: "Graphic Designer", company: "Adwemy Motor Pvt. Ltd.", image: "Bhavna-1.jpg" },
   { name: "Mansi", role: "Graphic Designer", company: "Adwemy Motor Pvt. Ltd.", image: "mansi-1.webp" },
   { name: "Karan", role: "Graphic Designer", company: "Adwemy Motor Pvt. Ltd.", image: "karan-1.jpg" },
 ];

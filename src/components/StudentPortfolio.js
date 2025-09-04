@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 
 const students = [
-  { name: "Sunil Kumar", image: "sunil-1.jpg", software: ["Photoshop", "Illustrator", "CorelDraw"], views: 345 },
+  { name: "Sunil Kumar", image: "Sunil-1.jpg", software: ["Photoshop", "Illustrator", "CorelDraw"], views: 345 },
   { name: "Raj Mehra", image: "Rajnish-1.jpg", software: ["Photoshop", "Illustrator", "After Effects"], views: 345 },
-  { name: "Pooja Singh", image: "pooja.jpg", software: ["CorelDraw", "Photoshop", "Illustrator"], views: 345 },
+  { name: "Pooja Singh", image: "Pooja-1.webp", software: ["CorelDraw", "Photoshop", "Illustrator"], views: 345 },
   { name: "Aman", image: "Aman-1.jpg", software: ["After Effects", "Premiere Pro"], views: 345 },
   { name: "Mansi", image: "mansi.webp", software: ["After Effects", "Figma", "Photoshop"], views: 345 },
   { name: "Hemant", image: "Hemant.webp", software: ["Premiere Pro", "XD", "Illustrator"], views: 345 },
