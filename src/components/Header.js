@@ -46,7 +46,7 @@ const Header = () => {
     loading="lazy"
     width="300"
     height="100"
-    className="w-50 md:w-46 object-contain"
+    className="w-48 md:w-44 object-contain"
     src="/logo.png"
   />
 </Link>
