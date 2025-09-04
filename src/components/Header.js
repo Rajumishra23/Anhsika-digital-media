@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <header className="bg-[#652f8e] shadow-md fixed top-0 left-0 right-0 z-50 transition-all">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-20 md:h-24">
 
         {/* Mobile Menu Icon */}
         <div className="md:hidden flex items-center">
@@ -39,25 +39,25 @@ const Header = () => {
             </svg>
           </button>
         </div>
+{/* Logo */}
+<Link to="/">
+  <img
+    alt="logo"
+    loading="lazy"
+    width="300"
+    height="100"
+    className="w-50 md:w-46 object-contain"
+    src="/logo.png"
+  />
+</Link>
 
-        {/* Logo */}
-        <Link to="/">
-          <img
-            alt="logo"
-            loading="lazy"
-            width="200"
-            height="80"
-            className="w-42 md:w-30 md:ms-5 object-contain"
-            src="/logo.png"
-          />
-        </Link>
 
         {/* Desktop Search Bar */}
         <div className="hidden md:block relative w-full max-w-sm mx-6">
           <input
             type="text"
             placeholder="Search..."
-            className="w-full px-4 py-2 border border-gray-300 rounded-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@ const Header = () => {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="absolute right-3 top-2.5 text-gray-400 w-4 h-4"
+            className="absolute right-3 top-3 text-gray-400 w-4 h-4"
           >
             <path d="m21 21-4.34-4.34" />
             <circle cx="11" cy="11" r="8" />
@@ -120,7 +120,7 @@ const Header = () => {
           </div>
 
           <a className="text-white hover:text-gray-50" href="#contact">Contact</a>
-          <button className="bg-white text-[#652f8e] px-5 py-2 rounded-full shadow-md hover:bg-gray-50 transition">
+          <button className="bg-white text-[#652f8e] px-5 py-3 rounded-full shadow-md hover:bg-gray-50 transition">
             Sign In
           </button>
         </div>
@@ -129,7 +129,7 @@ const Header = () => {
         <div className="md:hidden flex items-center gap-2">
           <a
             href="tel:9958890093"
-            className="h-10 gap-2 px-3 bg-white text-[#652f8e] rounded-full shadow hover:bg-gray-50 flex items-center justify-center"
+            className="h-12 gap-2 px-3 bg-white text-[#652f8e] rounded-full shadow hover:bg-gray-50 flex items-center justify-center"
           >
             <span className="font-bold">Call</span>
           </a>
@@ -138,18 +138,18 @@ const Header = () => {
 
       {/* Mobile Nav Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#652f8e] px-4 py-4 space-y-2">
+        <div className="md:hidden bg-[#652f8e] px-4 py-6 space-y-3">
           <a className="block py-2 text-white hover:text-gray-50" href="#about">About</a>
           <details className="group">
             <summary className="py-2 text-white cursor-pointer list-none">Courses ▾</summary>
             <div className="pl-4">
-              <a className="block py-1 text-white hover:text-gray-200" href="graphic-design-course.html">Graphic Designing</a>
-              <a className="block py-1 text-white hover:text-gray-200" href="#video-editing">Video Editing</a>
-              <a className="block py-1 text-white hover:text-gray-200" href="digital-marketing-course.html">Digital Marketing</a>
+              <a className="block py-2 text-white hover:text-gray-200" href="graphic-design-course.html">Graphic Designing</a>
+              <a className="block py-2 text-white hover:text-gray-200" href="#video-editing">Video Editing</a>
+              <a className="block py-2 text-white hover:text-gray-200" href="digital-marketing-course.html">Digital Marketing</a>
             </div>
           </details>
           <a className="block py-2 text-white hover:text-gray-50" href="#contact">Contact</a>
-          <button className="w-full bg-white text-[#652f8e] py-2 rounded-full shadow hover:bg-gray-50 transition">
+          <button className="w-full bg-white text-[#652f8e] py-3 rounded-full shadow hover:bg-gray-50 transition">
             Sign In
           </button>
         </div>

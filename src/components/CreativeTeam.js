@@ -2,9 +2,9 @@ import React from "react";
 
 const teamMembers = [
   { name: "Ankit KK", role: "Founder", image: "Ankit-1.jpg" },
-  { name: "Sulekha", role: "Founder", image: "sulekha-1.jpg" },
-  { name: "Pooja", role: "Admin Dept.", image: "pooja-1.webp" },
-  { name: "Ananya Mukhi", role: "HR", image: "Ananya-1.webp" },
+  { name: "Sulekha", role: "Founder", image: "Sulekha-1.jpg" },
+  { name: "Pooja", role: "Admin Dept.", image: "Pooja-1.webp" },
+  { name: "Ananya Mukhi", role: "HR", image: "ananya-1.webp" },
 ];
 
 const CreativeTeam = () => {
