@@ -75,11 +75,11 @@ const Header = ({ modalActive }) => {
         </div>
 
         {/* Mobile Hamburger + Logo + Call */}
-        <div className="md:hidden flex items-center justify-between w-full">
+        <div className="md:hidden relative flex items-center justify-between w-full">
           {/* Hamburger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-white"
+            className="text-white z-20"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +106,7 @@ const Header = ({ modalActive }) => {
           </button>
 
           {/* Logo Centered */}
-          <Link to="/" className="absolute left-1/2 transform -translate-x-1/2">
+          <Link to="/" className="absolute left-1/2 transform -translate-x-1/2 z-10">
             <img
               alt="logo"
               loading="lazy"
@@ -118,7 +118,7 @@ const Header = ({ modalActive }) => {
           {/* Call Button */}
           <a
             href="tel:9958890093"
-            className="h-12 px-3 bg-white text-[#652f8e] rounded-full shadow flex items-center justify-center"
+            className="h-12 px-3 bg-white text-[#652f8e] rounded-full shadow flex items-center justify-center z-20"
           >
             <span className="font-bold">Call</span>
           </a>

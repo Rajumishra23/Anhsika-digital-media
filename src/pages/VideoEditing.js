@@ -108,12 +108,12 @@ const VideoEditing = () => {
             Advanced Diploma in Video Editing (ADVE) is the best Professional Course for a student who wants to build their career in the Video Editing field. This is a 2–3 Months Diploma Course in the Advertising and Marketing Fields for any stream student—especially an Art stream student who has completed 12th can join the Video Editing Course.
           </p>
 
-          {/* Image */}
+        {/* Image */}
 <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 mx-auto w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-4xl">
   <img
     src="Raju1.png"
     alt="Video Editing Institute Promo"
-    className="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-[40rem] xl:h-[48rem] 2xl:h-[56rem] object-cover transition-transform duration-500 hover:scale-105"
+    className="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-[40rem] xl:h-[52rem] 2xl:h-[64rem] object-cover transition-transform duration-500 hover:scale-105"
     loading="lazy"
   />
 </div>
