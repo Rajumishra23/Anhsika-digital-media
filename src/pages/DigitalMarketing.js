@@ -50,33 +50,41 @@ const DigitalMarketing = () => {
   return (
     <section className="bg-black text-white min-h-[100vh] px-4 pt-8">
 
-      {/* Top Section */}
-      <motion.div className="text-center mb-16 max-w-3xl mx-auto"
-        initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-      >
-        <h1 className="font-extrabold leading-snug space-y-1 text-2xl sm:text-3xl md:text-4xl" style={{ fontFamily: 'Arial, Helvetica, sans-serif' }}>
-          <span className="block text-white">Best</span>
-          <span className="block text-white">Institute for</span>
-          <span className="block text-pink-600">Digital Marketing</span>
-          <span className="block text-white">Courses in Delhi</span>
-        </h1>
+    <motion.div
+  className="text-center max-w-3xl mx-auto mt-28 sm:mt-32 md:mt-36 mb-16"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={fadeInUp}
+>
+  <h1
+    className="font-extrabold leading-snug space-y-1 text-2xl sm:text-3xl md:text-4xl"
+    style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+  >
+    <span className="block text-white">Best</span>
+    <span className="block text-white">Institute for</span>
+    <span className="block text-pink-600">Digital Marketing</span>
+    <span className="block text-white">Courses in Delhi</span>
+  </h1>
 
-        <p className="mt-4 text-white-700 text-sm sm:text-base leading-relaxed px-2">
-          Television, Gaming, Media, Advertising & Marketing Agency and Corporate Sector
-        </p>
+  <p className="mt-4 text-white-700 text-sm sm:text-base leading-relaxed px-2">
+    Television, Gaming, Media, Advertising & Marketing Agency and Corporate Sector
+  </p>
 
-        <button
-          className="mt-6 text-white text-sm sm:text-base font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2 mx-auto"
-          style={{
-            fontFamily: "Arial, Helvetica, sans-serif",
-            backgroundImage: "url('bgbtn.webp')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          Free Career Counselling →
-        </button>
-      </motion.div>
+  <button
+    className="mt-6 text-white text-sm sm:text-base font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2 mx-auto"
+    style={{
+      fontFamily: "Arial, Helvetica, sans-serif",
+      backgroundImage: "url('bgbtn.webp')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
+    Free Career Counselling →
+  </button>
+</motion.div>
+
+
 
       <div className="relative overflow-hidden rounded-xl shadow-xl mx-auto" style={{ width: '70%', paddingTop: '45%' }}>
         <video
