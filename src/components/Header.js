@@ -74,10 +74,25 @@ const Header = ({ modalActive }) => {
           <button className="bg-white text-[#652f8e] px-5 py-3 rounded-full shadow-md hover:bg-gray-50 transition">Sign In</button>
         </div>
 
-        {/* Mobile Hamburger + Logo */}
+        {/* Mobile Hamburger + Logo + Call */}
         <div className="md:hidden flex items-center justify-between w-full">
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10">
+          {/* Hamburger */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-10 h-10"
+            >
               {mobileMenuOpen ? (
                 <path d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -90,9 +105,23 @@ const Header = ({ modalActive }) => {
             </svg>
           </button>
 
-          <Link to="/">
-            <img alt="logo" loading="lazy" className="w-48 object-contain" src="/logo.png" />
+          {/* Logo Centered */}
+          <Link to="/" className="absolute left-1/2 transform -translate-x-1/2">
+            <img
+              alt="logo"
+              loading="lazy"
+              className="w-48 object-contain"
+              src="/logo.png"
+            />
           </Link>
+
+          {/* Call Button */}
+          <a
+            href="tel:9958890093"
+            className="h-12 px-3 bg-white text-[#652f8e] rounded-full shadow flex items-center justify-center"
+          >
+            <span className="font-bold">Call</span>
+          </a>
         </div>
       </div>
 
