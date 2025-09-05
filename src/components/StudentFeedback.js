@@ -1,11 +1,9 @@
 import React from "react";
 
 const feedbackVideos = [
-  {
-    src: "/vivek-video.mp4",
-    alt: "Vivek's Feedback",
-  },
-  // Add more video objects here as needed
+   { src: "/vivek-video.mp4", label: "Vivek" },
+  { src: "/sumit.mp4", label: "Sumit", hasOverlay: true },
+  { src: "/Adm.mp4", label: "Adm" },
 ];
 
 const StudentFeedback = () => {

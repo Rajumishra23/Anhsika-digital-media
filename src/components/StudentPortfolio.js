@@ -9,7 +9,7 @@ const students = [
   { name: "Hemant", image: "Hemant.webp", software: ["Premiere Pro", "XD", "Illustrator"], views: 345 },
 ];
 
-const Portfolio = () => {
+const Portfolio = ({ id }) => {
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -22,7 +22,7 @@ const Portfolio = () => {
   };
 
   return (
-    <section className="bg-white py-12 px-4">
+    <section id={id} className="bg-white py-12 px-4">
       <div className="max-w-7xl mx-auto text-center relative">
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-10">
@@ -46,7 +46,6 @@ const Portfolio = () => {
             style={{
               overflowX: "auto",
               WebkitOverflowScrolling: "touch",
-              touchAction: "none", // disables swipe on mobile
             }}
           >
             {students.map((student, idx) => (

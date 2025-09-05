@@ -64,7 +64,7 @@ const Footer = () => {
       {/* Divider + Copyright */}
       <hr className="my-6 border-gray-700" />
       <div className="text-center text-sm text-gray-500">
-        © 2025 Designifiy Digital Media Pvt. Ltd. All rights reserved.
+        © 2025 Designifiy Bigdesigned software tecnologies All rights reserved.
       </div>
     </footer>
   );
