@@ -60,6 +60,26 @@ const GraphicDesigning = () => {
     Free Career Counselling →
   </button>
 </motion.div>
+ {/* Decorative Images */}
+      <div className="absolute left-20 top-1/3 transform -translate-y-1/2 hidden md:block">
+        <img
+          alt="Left Decoration"
+          src="/v2-top-left.jpg"
+          width="240"
+          height="160"
+          className="rounded-2xl shadow-lg"
+        />
+      </div>
+
+      <div className="absolute right-0 top-1/3 transform -translate-y-1/2 hidden md:block">
+        <img
+          alt="Right Decoration"
+          src="/v2-right.avif"
+          width="240"
+          height="160"
+          className="rounded-2xl shadow-lg"
+        />
+      </div>
 
 
       {/* Video Section */}
