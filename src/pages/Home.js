@@ -13,8 +13,7 @@ import CreativeTeam from "../components/CreativeTeam";
 import Header from "../components/Header";
 import About from "../components/About";
 import WhyChoose from "../components/WhyChoose";
-import CourseHighlight from "../components/CourseHighlights";
-import Reviews from "../components/Reviews";
+
 
 function App() {
   return (
@@ -25,8 +24,6 @@ function App() {
       <CourseSelector />
       <OnlineOfflineSection />
       <StudentFeedback />
-      <CourseHighlight />
-      <Reviews />
       <PlacedStudent />
       <StudentPortfolio />
       <Recently />

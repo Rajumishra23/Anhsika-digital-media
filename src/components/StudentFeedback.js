@@ -22,7 +22,7 @@ const StudentFeedback = () => {
           {feedbackVideos.map((video, index) => (
             <div
               key={index}
-              className="relative flex-shrink-0 snap-center overflow-hidden bg-black group rounded-2xl h-50 sm:h-76 w-[99%] sm:w-[40%] mx-auto sm:mx-0"
+             className="relative flex-shrink-0 snap-center overflow-hidden bg-black group rounded-2xl h-[220px] sm:h-[200px] md:h-[260px] w-[99%] sm:w-[40%] mx-auto sm:mx-0"
             >
               <video
                 src={video.src}

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = ({ modalActive }) => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -49,29 +48,30 @@ const Header = ({ modalActive }) => {
         <div className="hidden md:flex items-center gap-6">
           <Link className="text-white hover:text-gray-50" to="/about">About</Link>
 
-          <div
-            className="relative"
-            onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
-          >
+          {/* Dropdown (Stable on Hover) */}
+          <div className="relative group">
             <button className="text-white hover:text-gray-50 flex justify-between items-center gap-2">
               <span>Courses</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                className="text-white">
                 <path d="M6 9l6 6 6-6" />
               </svg>
             </button>
 
-            {dropdownOpen && (
-              <div className="absolute top-full left-0 bg-white text-gray-800 rounded-md shadow-md mt-2 w-48 z-50">
-                <Link to="/graphic-designing" className="block px-4 py-2 hover:bg-purple-100">Graphic Designing</Link>
-                <Link to="/video-editing" className="block px-4 py-2 hover:bg-purple-100">Video Editing</Link>
-                <Link to="/digital-marketing" className="block px-4 py-2 hover:bg-purple-100">Digital Marketing</Link>
-              </div>
-            )}
+            {/* Dropdown Menu */}
+            <div className="absolute top-full left-0 hidden group-hover:block bg-white text-gray-800 rounded-md shadow-md w-48 z-50">
+              <Link to="/graphic-designing" className="block px-4 py-2 hover:bg-purple-100">Graphic Designing</Link>
+              <Link to="/video-editing" className="block px-4 py-2 hover:bg-purple-100">Video Editing</Link>
+              <Link to="/digital-marketing" className="block px-4 py-2 hover:bg-purple-100">Digital Marketing</Link>
+            </div>
           </div>
 
           <Link className="text-white hover:text-gray-50" to="/contact">Contact</Link>
-          <button className="bg-white text-[#652f8e] px-5 py-3 rounded-full shadow-md hover:bg-gray-50 transition">Sign In</button>
+          <button className="bg-white text-[#652f8e] px-5 py-3 rounded-full shadow-md hover:bg-gray-50 transition">
+            Sign In
+          </button>
         </div>
 
         {/* Mobile Hamburger + Logo + Call */}
@@ -138,7 +138,9 @@ const Header = ({ modalActive }) => {
             </div>
           </details>
           <Link className="block py-2 text-white hover:text-gray-50" to="/contact">Contact</Link>
-          <button className="w-full bg-white text-[#652f8e] py-3 rounded-full shadow hover:bg-gray-50 transition">Sign In</button>
+          <button className="w-full bg-white text-[#652f8e] py-3 rounded-full shadow hover:bg-gray-50 transition">
+            Sign In
+          </button>
         </div>
       )}
     </header>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import OnlineOfflineSection from "../components/OnlineOfflineSection";
 import {
@@ -8,7 +8,6 @@ import {
   FaShoppingCart, FaUserFriends, FaProjectDiagram, FaUserTie
 } from "react-icons/fa";
 import Footer from "../components/Footer";
-import UpcomingBatches from "../components/UpcomingBatches";
 import StudentReview from "../components/StudentReview";
 import StudentPortfolio from "../components/StudentPortfolio";
 import PlacedStudent from "../components/PlacedStudent";
@@ -35,6 +34,7 @@ const modules = [
 ];
 
 const DigitalMarketing = () => {
+  const [active, setActive] = useState("graphic");
   const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
@@ -301,13 +301,162 @@ const DigitalMarketing = () => {
             <p className="mt-1 text-gray-300 text-base">and Your Convenient Batch Slot</p>
           </div>
 
-          {/* Upcoming Batches Section */}
-          <UpcomingBatches />
+        <section className="py-10 bg-black">
+  <div className="max-w-7xl mx-auto px-4">
+    {/* Heading */}
+    <div className="text-center mb-10">
+      <h2 className="text-3xl font-extrabold text-blue-500">Upcoming Batches</h2>
+      <p className="text-white-500 mt-2">Choose the course and join our next batch</p>
+    </div>
 
-          {/* Student Review Section */}
-          <div className="border border-gray-300 rounded-xl px-6 py-8 text-center">
-            <StudentReview />
+    {/* Tabs */}
+    <div className="relative mb-10">
+      <div className="flex gap-3 overflow-x-auto no-scrollbar px-2 py-2 scroll-smooth">
+        <button
+          onClick={() => setActive("graphic")}
+          className={`flex-shrink-0 px-5 py-2 rounded-full text-sm font-medium transition border whitespace-nowrap ${
+            active === "graphic"
+              ? "bg-gray-300 text-gray-700 border-gray-400 shadow"
+              : "bg-white text-gray-700 border-gray-300 hover:bg-purple-50 hover:text-[#652f8e]"
+          }`}
+        >
+          Graphic Designing
+        </button>
+        <button
+          onClick={() => setActive("video")}
+          className={`flex-shrink-0 px-5 py-2 rounded-full text-sm font-medium transition border whitespace-nowrap ${
+            active === "video"
+              ? "bg-gray-300 text-gray-700 border-gray-400 shadow"
+              : "bg-white text-gray-700 border-gray-300 hover:bg-purple-50 hover:text-[#652f8e]"
+          }`}
+        >
+          Video Editing
+        </button>
+        <button
+          onClick={() => setActive("digital")}
+          className={`flex-shrink-0 px-5 py-2 rounded-full text-sm font-medium transition border whitespace-nowrap ${
+            active === "digital"
+              ? "bg-gray-300 text-gray-700 border-gray-400 shadow"
+              : "bg-white text-gray-700 border-gray-300 hover:bg-purple-50 hover:text-[#652f8e]"
+          }`}
+        >
+          Digital Marketing
+        </button>
+      </div>
+    </div>
+
+    {/* Batch Cards */}
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {active === "graphic" && (
+        <>
+          {/* 3 Graphic Designing Cards */}
+          {/* Card 1 */}
+          <div className="bg-white p-6 rounded-2xl border shadow-sm hover:shadow-lg relative overflow-hidden">
+            <span className="absolute top-2 right-4 text-xs font-semibold bg-[#652f8e] text-white px-3 py-1 rounded-full">Weekday</span>
+            <h3 className="text-lg font-bold text-[#652f8e] mb-3">Graphic Design - Morning</h3>
+            <div className="space-y-2 text-sm text-gray-700">
+              <p><span className="font-medium">📆 Batch Start:</span> 17 July, August</p>
+              <p><span className="font-medium">⏰ Time:</span> Morning 11:00</p>
+              <p><span className="font-medium">🎓 Class Mode:</span> Offline + Online</p>
+            </div>
           </div>
+          {/* Card 2 */}
+          <div className="bg-white p-6 rounded-2xl border shadow-sm hover:shadow-lg relative overflow-hidden">
+            <span className="absolute top-2 right-4 text-xs font-semibold bg-[#652f8e] text-white px-3 py-1 rounded-full">Weekend</span>
+            <h3 className="text-lg font-bold text-[#652f8e] mb-3">Graphic Design - Evening</h3>
+            <div className="space-y-2 text-sm text-gray-700">
+              <p><span className="font-medium">📆 Batch Start:</span> 19 July, August</p>
+              <p><span className="font-medium">⏰ Time:</span> Evening 5:00</p>
+              <p><span className="font-medium">🎓 Class Mode:</span> Online</p>
+            </div>
+          </div>
+          {/* Card 3 */}
+          <div className="bg-white p-6 rounded-2xl border shadow-sm hover:shadow-lg relative overflow-hidden">
+            <span className="absolute top-2 right-4 text-xs font-semibold bg-[#652f8e] text-white px-3 py-1 rounded-full">Weekend</span>
+            <h3 className="text-lg font-bold text-[#652f8e] mb-3">Graphic Design - Weekend</h3>
+            <div className="space-y-2 text-sm text-gray-700">
+              <p><span className="font-medium">📆 Batch Start:</span> 21 July, August</p>
+              <p><span className="font-medium">⏰ Time:</span> Afternoon 2:00</p>
+              <p><span className="font-medium">🎓 Class Mode:</span> Offline</p>
+            </div>
+          </div>
+        </>
+      )}
+
+      {active === "video" && (
+        <>
+          {/* 3 Video Editing Cards */}
+          {/* Card 1 */}
+          <div className="bg-white p-6 rounded-2xl border shadow-sm hover:shadow-lg relative overflow-hidden">
+            <span className="absolute top-2 right-4 text-xs font-semibold bg-[#652f8e] text-white px-3 py-1 rounded-full">Weekday</span>
+            <h3 className="text-lg font-bold text-[#652f8e] mb-3">Video Editing - Morning</h3>
+            <div className="space-y-2 text-sm text-gray-700">
+              <p><span className="font-medium">📆 Batch Start:</span> 20 July, August</p>
+              <p><span className="font-medium">⏰ Time:</span> Morning 10:00</p>
+              <p><span className="font-medium">🎓 Class Mode:</span> Online</p>
+            </div>
+          </div>
+          {/* Card 2 */}
+          <div className="bg-white p-6 rounded-2xl border shadow-sm hover:shadow-lg relative overflow-hidden">
+            <span className="absolute top-2 right-4 text-xs font-semibold bg-[#652f8e] text-white px-3 py-1 rounded-full">Weekend</span>
+            <h3 className="text-lg font-bold text-[#652f8e] mb-3">Video Editing - Evening</h3>
+            <div className="space-y-2 text-sm text-gray-700">
+              <p><span className="font-medium">📆 Batch Start:</span> 22 July, August</p>
+              <p><span className="font-medium">⏰ Time:</span> Evening 6:00</p>
+              <p><span className="font-medium">🎓 Class Mode:</span> Offline</p>
+            </div>
+          </div>
+          {/* Card 3 */}
+          <div className="bg-white p-6 rounded-2xl border shadow-sm hover:shadow-lg relative overflow-hidden">
+            <span className="absolute top-2 right-4 text-xs font-semibold bg-[#652f8e] text-white px-3 py-1 rounded-full">Weekend</span>
+            <h3 className="text-lg font-bold text-[#652f8e] mb-3">Video Editing - Weekend</h3>
+            <div className="space-y-2 text-sm text-gray-700">
+              <p><span className="font-medium">📆 Batch Start:</span> 24 July, August</p>
+              <p><span className="font-medium">⏰ Time:</span> Afternoon 3:00</p>
+              <p><span className="font-medium">🎓 Class Mode:</span> Hybrid</p>
+            </div>
+          </div>
+        </>
+      )}
+
+      {active === "digital" && (
+        <>
+          {/* 3 Digital Marketing Cards */}
+          {/* Card 1 */}
+          <div className="bg-white p-6 rounded-2xl border shadow-sm hover:shadow-lg relative overflow-hidden">
+            <span className="absolute top-2 right-4 text-xs font-semibold bg-[#652f8e] text-white px-3 py-1 rounded-full">Weekday</span>
+            <h3 className="text-lg font-bold text-[#652f8e] mb-3">Digital Marketing - Morning</h3>
+            <div className="space-y-2 text-sm text-gray-700">
+              <p><span className="font-medium">📆 Batch Start:</span> 25 July, August</p>
+              <p><span className="font-medium">⏰ Time:</span> Morning 9:00</p>
+              <p><span className="font-medium">🎓 Class Mode:</span> Offline</p>
+            </div>
+          </div>
+          {/* Card 2 */}
+          <div className="bg-white p-6 rounded-2xl border shadow-sm hover:shadow-lg relative overflow-hidden">
+            <span className="absolute top-2 right-4 text-xs font-semibold bg-[#652f8e] text-white px-3 py-1 rounded-full">Weekend</span>
+            <h3 className="text-lg font-bold text-[#652f8e] mb-3">Digital Marketing - Evening</h3>
+            <div className="space-y-2 text-sm text-gray-700">
+              <p><span className="font-medium">📆 Batch Start:</span> 27 July, August</p>
+              <p><span className="font-medium">⏰ Time:</span> Evening 7:00</p>
+              <p><span className="font-medium">🎓 Class Mode:</span> Online</p>
+            </div>
+          </div>
+          {/* Card 3 */}
+          <div className="bg-white p-6 rounded-2xl border shadow-sm hover:shadow-lg relative overflow-hidden">
+            <span className="absolute top-2 right-4 text-xs font-semibold bg-[#652f8e] text-white px-3 py-1 rounded-full">Weekend</span>
+            <h3 className="text-lg font-bold text-[#652f8e] mb-3">Digital Marketing - Weekend</h3>
+            <div className="space-y-2 text-sm text-gray-700">
+              <p><span className="font-medium">📆 Batch Start:</span> 29 July, August</p>
+              <p><span className="font-medium">⏰ Time:</span> Afternoon 4:00</p>
+              <p><span className="font-medium">🎓 Class Mode:</span> Hybrid</p>
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  </div>
+</section>
         </div>
       </section>
 
@@ -375,20 +524,163 @@ const DigitalMarketing = () => {
             href="/demo"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg shadow-lg font-medium hover:scale-105 transition-transform"
           >
-            Request Free Demo →
+            Book free Demo Class →
           </a>
         </div>
       </section>
 
-      {/* Student Portfolio Section */}
-      <section className="bg-white text-black py-12 px-4">
-        <StudentPortfolio />
-      </section>
+     <section className="bg-black py-16 px-4">
+  <div className="max-w-7xl mx-auto text-center">
+    <h2 className="text-3xl font-bold text-white-800 mb-12">
+      What Our <span className="text-white-600">Students Say</span>
+    </h2>
 
-      {/* Placed Student Section */}
-      <section className="bg-black text-white py-12 px-4">
-        <PlacedStudent />
-      </section>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      {[
+        {
+          name: "Aadesh Nishad",
+          image: "Avinash.webp",
+          review:
+            "Great institute for digital marketing and graphic design. Practical training and solid knowledge!",
+        },
+        {
+          name: "Kundan Kumar",
+          image: "kundan.webp",
+          review:
+            "Very good teaching and hands-on training. Highly recommend this institute!",
+        },
+        {
+          name: "Ramesh Sahu",
+          image: "rajnish.webp",
+          review:
+            "Completed digital marketing course here. Learned SEO, social media, email marketing. Trainer support was excellent!",
+        },
+        {
+          name: "Anshika Digital Marketing Institute",
+          image: "anshika.webp",
+          review:
+            "Top-notch institute with practical training and personal growth. Great for career building!",
+        },
+      ].map((student, index) => (
+        <div
+          key={index}
+          className="bg-gray-50 rounded-xl shadow-md p-6 hover:shadow-lg transition duration-300 text-left"
+        >
+          <div className="w-20 h-20 mb-4 rounded-full overflow-hidden border-4 border-blue-400">
+            <img
+              src={student.image}
+              alt={student.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <h3 className="text-lg font-semibold text-blue-700 mb-1">
+            {student.name}
+          </h3>
+
+          {/* ⭐ Stars */}
+          <div className="flex mb-2 text-yellow-500">
+            {[...Array(5)].map((_, i) => (
+              <span key={i}>⭐</span>
+            ))}
+          </div>
+
+          <p className="text-sm text-gray-700">{student.review}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+     <section className="bg-black py-16 px-4 relative">
+  <div className="max-w-7xl mx-auto text-center">
+    {/* Heading */}
+    <h2 className="text-2xl md:text-3xl font-bold text-white-800 mb-10">
+      Some of Our <span className="text-purple-600">Students</span> Got the{" "}
+      <span className="text-blue-600">Placement</span> in these{" "}
+      <span className="text-green-600">Companies</span>
+    </h2>
+
+    <div className="flex justify-center relative">
+      {/* Logos Grid */}
+      <div
+        id="companiesContainer"
+        className="grid grid-cols-2 gap-6 max-h-[400px] pr-14 overflow-hidden"
+        style={{ overflowY: "auto" }}
+      >
+        {[
+          { name: "AANS Infosys", image: "brand.webp" },
+          { name: "TechAlpha", image: "Taca.webp" },
+          { name: "Scorp", image: "scorp.webp" },
+          { name: "International Education Overseas", image: "Edu.webp" },
+          { name: "TopGro", image: "top.webp" },
+          { name: "ND Solutions", image: "N.webp" },
+        ].map((company, idx) => (
+          <div
+            key={idx}
+            className="flex flex-col items-center bg-white p-4 rounded-xl shadow hover:shadow-md transition"
+          >
+            <img
+              src={company.image}
+              alt={company.name}
+              className="w-24 h-24 object-cover rounded-full mb-3 border-2 border-purple-500"
+            />
+            <p className="text-gray-700 font-medium text-center">
+              {company.name}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* Scroll Buttons */}
+      <div className="absolute right-0 top-0 bottom-0 flex flex-col justify-between py-4">
+        <button
+          onClick={() => {
+            const el = document.getElementById("companiesContainer");
+            el.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="bg-purple-600 text-white w-10 h-10 rounded-full shadow hover:bg-purple-700 flex items-center justify-center"
+        >
+          ↑
+        </button>
+        <button
+          onClick={() => {
+            const el = document.getElementById("companiesContainer");
+            el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
+          }}
+          className="bg-purple-600 text-white w-10 h-10 rounded-full shadow hover:bg-purple-700 flex items-center justify-center"
+        >
+          ↓
+        </button>
+      </div>
+    </div>
+
+    {/* CTA Button */}
+    <a
+      href="#"
+      className="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-md hover:bg-purple-700 transition text-sm font-semibold mt-10"
+    >
+      Enroll Now
+    </a>
+
+    {/* Contact Info */}
+    <div className="text-sm text-gray-600 text-center space-y-1 mt-4">
+      <p>
+        Email:{" "}
+        <a href="mailto:info@example.com" className="underline">
+          info@example.com
+        </a>
+      </p>
+      <p>
+        Phone:{" "}
+        <a href="tel:+919017654260" className="underline">
+          +91 9017654260
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* Footer Section */}
       <Footer />
